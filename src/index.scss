@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Intern', system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+//********************************
+.wrapper {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 40px auto auto;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+
+  //********************************
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px;
+
+    //********************************
+    .header-left {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 15px;
+      }
+
+      //********************************
+      .header-info {
+
+        h3,
+        p {
+          margin: 0;
+        }
+
+        p {
+          opacity: .5;
+        }
+
+      }
+    }
+
+    //********************************
+    .header-right {
+      display: flex;
+
+      li {
+        list-style-type: none;
+        margin-right: 20px;
+
+        img {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  //********************************
+  hr {
+    border-color: #f3f3f3d7;
+  }
+
+  //******************************** start content
+  .content {
+    padding: 0 40px 40px;
+
+    //******************************** start sneakers
+    .sneakers {
+      display: flex;
+
+      .card {
+        text-align: center;
+        border-radius: 40px;
+        border: 1px solid #F3F3F3;
+        padding: 20px 30px 30px;
+        width: 220px;
+        margin-right: 20px;
+        transition: .4s;
+
+        &:hover {
+          box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+          transition: .4s;
+          cursor: pointer;
+        }
+
+        h5 {
+          text-align: start;
+          opacity: 0.9;
+        }
+
+        .card-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .card-sale {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+
+            span {
+              font-size: 13px;
+              opacity: 0.5;
+              text-transform: uppercase;
+            }
+          }
+
+          button {
+            width: 32px;
+            height: 32px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: 1px solid #F2F2F2;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    //********************************  end sneakers
+  }
+
+  //******************************** end content
+
+}
