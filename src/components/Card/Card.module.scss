@@ -1,0 +1,51 @@
+.card {
+    border-radius: 40px;
+    border: 1px solid #F3F3F3;
+    padding: 20px 30px 30px;
+    width: 190px;
+    margin: 20px 10px;
+    transition: box-shadow .4s ease-in-out, transform .3s ease-in-out;
+    text-align: center;
+
+    &:hover {
+        box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+        transition: .4s;
+        transform: translateY(-5px);
+    }
+
+    .favorite {
+        position: absolute;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .title {
+        opacity: 0.9;
+        text-align: start;
+    }
+
+    .cardBottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .cardSale {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+
+            span {
+                font-size: 13px;
+                opacity: 0.5;
+                text-transform: uppercase;
+            }
+        }
+
+        .plus {
+            cursor: pointer;
+            transition: .3s;
+        }
+    }
+}

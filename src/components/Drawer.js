@@ -1,28 +1,26 @@
-function Drawer() {
+function Drawer({ onClose, items }) {
+
     return (
-        <div style={{ display: 'none' }} className="overlay">
+        <div className="overlay">
             <div className="drawer">
                 <h2>Корзина
-                    <img src="/img/clear-x.svg" alt="" />
+                    <img onClick={onClose} src="/img/clear-x.svg" alt="" />
                 </h2>
                 <div className="items">
-
-                    <div className="cartItem">
-                        <img className="sneak" width={70} height={70} src="/img/sneaker1.jpg" alt="" />
-                        <div className="mr-20">
-                            <p>Мужские Кроссовки Nike Air Max 270</p>
-                            <b>12 999 руб.</b>
-                        </div>
-                        <img className="clear-btn" src="/img/clear-x.svg" alt="" />
-                    </div>
-                    <div className="cartItem">
-                        <img className="sneak" width={70} height={70} src="/img/sneaker1.jpg" alt="" />
-                        <div className="mr-20">
-                            <p>Мужские Кроссовки Nike Air Max 270</p>
-                            <b>12 999 руб.</b>
-                        </div>
-                        <img className="clear-btn" src="/img/clear-x.svg" alt="" />
-                    </div>
+                    {
+                        items.map((obj, i) => {
+                            return (
+                                <div key={i} className="cartItem">
+                                    <img className="sneak" width={70} height={70} src={obj.img} alt="" />
+                                    <div className="mr-20">
+                                        <p>{obj.title}</p>
+                                        <b>{obj.price} руб.</b>
+                                    </div>
+                                    <img className="clear-btn" src="/img/clear-x.svg" alt="" />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
                 <div className="cart-total-block">
                     <ul>
