@@ -5,15 +5,14 @@ const Card = ({ img, title, price, onFavourite, onPlus }) => {
     const [isAdd, setIsAdd] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
 
-    // const data = props.item;
 
     const onClickPlus = () => {
         onPlus({ img, title, price });
-        setIsAdd(!isAdd)
+        setIsAdd(!isAdd);
     }
     const onClickFavourite = () => {
         onFavourite();
-        setIsLiked(!isLiked)
+        setIsLiked(!isLiked);
     }
     return (
         <div className={styles.card}>

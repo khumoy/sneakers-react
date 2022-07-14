@@ -94,6 +94,78 @@ body {
 
     }
 
+    .openCart {
+      // padding: 50px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      h2 {
+        margin-bottom: 0;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      p {
+        text-align: center;
+        font-size: 16px;
+        opacity: 0.5;
+        width: 285px;
+        font-weight: 400;
+      }
+    }
+
+    .green-btn {
+      position: relative;
+
+      &:hover {
+        .arrowRight {
+          transform: translateX(5px);
+        }
+
+        .arrowLeft {
+          transform: translateX(-5px);
+        }
+      }
+
+      .arrowLeft {
+        position: absolute;
+        left: 80px;
+        top: 20px;
+        transition: transform 0.15s ease-in-out
+      }
+
+      .arrowRight {
+        position: absolute;
+        right: 40px;
+        top: 22px;
+        transition: transform 0.15s ease-in-out
+      }
+    }
+
+    .green-btn {
+      width: 100%;
+      height: 55px;
+      border-radius: 18px;
+      background: #9dd558;
+      border: 0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background: lighten(#9dd558, 5%);
+      }
+
+      &:active {
+        background: darken(#9dd558, 5%);
+      }
+    }
+
     .cart-total-block {
       ul {
         padding: 0 5px;
@@ -114,43 +186,6 @@ body {
         }
       }
 
-      .green-btn {
-        position: relative;
-
-        &:hover {
-          img {
-            transform: translateX(5px);
-          }
-        }
-
-        img {
-          position: absolute;
-          right: 40px;
-          top: 22px;
-          transition: transform 0.15s ease-in-out
-        }
-      }
-
-      .green-btn {
-        width: 100%;
-        height: 55px;
-        border-radius: 18px;
-        background: #9dd558;
-        border: 0;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s ease-in-out;
-
-        &:hover {
-          background: lighten(#9dd558, 5%);
-        }
-
-        &:active {
-          background: darken(#9dd558, 5%);
-        }
-      }
     }
   }
 
@@ -221,6 +256,16 @@ body {
         border: 1px solid #F2F2F2;
         padding: 0 15px;
         border-radius: 10px;
+        position: relative;
+
+        .clear {
+          position: absolute;
+          right: 0;
+          top: 10px;
+          height: 24px;
+          width: 24px;
+          cursor: pointer;
+        }
 
         input {
           border: 0;
