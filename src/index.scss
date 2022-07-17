@@ -199,26 +199,31 @@ body {
     border-bottom: 1px solid #EAEAEA;
 
     //********************************
-    .header-left {
-      display: flex;
-      align-items: center;
+    a {
+      text-decoration: none;
+      color: black;
 
-      img {
-        margin-right: 15px;
-      }
+      .header-left {
+        display: flex;
+        align-items: center;
 
-      //********************************
-      .header-info {
-
-        h3,
-        p {
-          margin: 0;
+        img {
+          margin-right: 15px;
         }
 
-        p {
-          opacity: .5;
-        }
+        //********************************
+        .header-info {
 
+          h3,
+          p {
+            margin: 0;
+          }
+
+          p {
+            opacity: .5;
+          }
+
+        }
       }
     }
 
